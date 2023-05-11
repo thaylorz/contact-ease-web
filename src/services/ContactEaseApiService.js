@@ -2,7 +2,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const config = {
-    apiURL: process.env.URL_BASE_CONTACT_EASE_API
+    apiURL: "https://contacteaseapi.azurewebsites.net/",
 };
 
 const createErrorToast = function(errorsMessage) {
@@ -139,7 +139,7 @@ class ContactEaseApiService {
 
         try {
             const response = await axios.put(`${config.apiURL}/persons/${personId}/contacts/${id}`, data);
-            createSuccessToast("Contado atualizado com sucesso.");
+            createSuccessToast("Contado criado com sucesso.");
             return response.data;
         } catch (error) {
             const errorsMessage = formatErrorMessages(error.response.data.errors);
