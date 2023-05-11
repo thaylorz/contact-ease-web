@@ -78,10 +78,17 @@ export default function ContactModalComponent({ isOpen, onClose, personId }) {
         }
     }
 
+    const handleCloseModal = () => {
+        setId('');
+        setType('');
+        setValue('');
+        onClose();
+    }
+
     return (
         <Modal
             open={isOpen}
-            onClose={onClose}
+            onClose={handleCloseModal}
         >
             <Box
                 sx={{
