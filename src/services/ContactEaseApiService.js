@@ -2,7 +2,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const config = {
-    apiURL: "https://contacteaseapi.azurewebsites.net/",
+    apiURL: "https://contacteaseapi.azurewebsites.net",
 };
 
 const createErrorToast = function(errorsMessage) {
