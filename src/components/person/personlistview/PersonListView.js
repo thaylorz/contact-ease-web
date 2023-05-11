@@ -111,7 +111,7 @@ export default function PersonListView() {
                     }
                 }}>
                     {
-                        persons.map((person) =>
+                        persons && persons.map((person) =>
                             <PersonListItem
                                 key={person.id}
                                 id={person.id}
