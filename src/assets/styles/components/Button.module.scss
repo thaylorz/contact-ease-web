@@ -1,0 +1,41 @@
+.Button {
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: var(--blue);
+    color: var(--white);
+    padding: 0 1rem;
+    transition: filter 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border: 0;
+
+    &.outlined {
+        background: var(--white);
+        border: 1px solid var(--blue);
+        color: var(--blue);
+        transition: background 0.3s;
+
+        &:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+    }
+
+    div {
+        margin-right: 1rem;
+    }
+
+    &:not(:disabled):hover {
+        filter: brightness(0.9);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
